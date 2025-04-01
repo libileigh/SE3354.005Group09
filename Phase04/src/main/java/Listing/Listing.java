@@ -10,16 +10,42 @@ public class Listing {
     private boolean searched;
     private int viewCount;
     private boolean available;
-
+    private static boolean samples = false;
     private static Map<String, Listing> listingsDatabase = new HashMap<>();
 
     public Listing(String id, String description, double price) {
         this.id = id;
-        this.description = description;
+        this.description = description != null ? description : "No description";
         this.price = price;
         this.searched = false;
         this.viewCount = 0;
         this.available = true;
+
+        if (!samples) {
+            long idTime = System.currentTimeMillis();
+            String id1 = "LIST" + (idTime + 1);
+            Listing test1 = new Listing(id1, "iPhone 15 Pro", 600.00);
+            listingsDatabase.put(id1, test1);
+
+            String id2 = "LIST" + (idTime + 2);
+            Listing test2 = new Listing(id2, "Calculus Textbook", 45.00);
+            test2.setAvailable(false);
+            listingsDatabase.put(id2, test2);
+
+            String id3 = "LIST" + (idTime + 3);
+            Listing test3 = new Listing(id3, "Yamaha Electric Guitar", 280.00);
+            listingsDatabase.put(id3, test3);
+
+            String id4 = "LIST" + (idTime + 4);
+            Listing test4 = new Listing(id4, "Size L UTD Shirt", 14.00);
+            listingsDatabase.put(id4, test4);
+
+            String id5 = "LIST" + (idTime + 5);
+            Listing test5 = new Listing(id5, "Various stationary lot", 23.00);
+            listingsDatabase.put(id5, test5);
+
+            samples = true;
+        }
     }
 
     public boolean isAvailable(Listing listing) {

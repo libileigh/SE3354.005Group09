@@ -26,7 +26,7 @@ public class Listing {
         return listing != null && listing.available;
     }
 
-    public String retrieveDetails(Listing listing) {
+    public String getItemDetails(Listing listing) {
         if (listing == null) {
             return "Listing not found";
         }
@@ -45,7 +45,7 @@ public class Listing {
         return newListing;
     }
 
-    public static Listing retrieveItem(String itemId) {
+    public static Listing getItem(String itemId) {
         return listingsDatabase.get(itemId);
     }
 

@@ -6,7 +6,7 @@ import java.util.Map;
 public class AuthenticationService {
     private Map<String, Integer> users = new HashMap<>();
     public AuthenticationService() {
-        // Pre-populate with 15 Gmail accounts and store the hash code of their passwords
+
         users.put("koushik@gmail.com", "CrazyPapaya@123".hashCode());
         users.put("kushal@gmail.com", "Yoshi@94".hashCode());
         users.put("manat@gmail.com", "Manbat54".hashCode());

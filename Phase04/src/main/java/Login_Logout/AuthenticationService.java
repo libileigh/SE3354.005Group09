@@ -8,7 +8,6 @@ public class AuthenticationService {
     private Map<String, Integer> users = new HashMap<>();
     private String loggedInUser;
     public AuthenticationService() {
-
         users.put("koushik@utdallas.edu", "CrazyPapaya@123".hashCode());
         users.put("kushal@utdallas.edu", "Yoshi@94".hashCode());
         users.put("manat@utdallas.edu", "Manbat54".hashCode());

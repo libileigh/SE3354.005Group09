@@ -75,11 +75,14 @@ public class AuthenticationService {
         loggedInUser = null;
     }
 
-    //
+    //isLoggedIn method check if there is an active session in other words is the user logged in
+    //if the isLoggedIn not null, that states the user is already loggedin.
+    //returns true if logged in, false if not logged.
     public boolean isLoggedIn() {
         return loggedInUser != null;
     }
 
+    //returns the email address of the currently logged-in user.
     public String getLoggedInUser() {
         return loggedInUser;
     }

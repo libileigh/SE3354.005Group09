@@ -48,7 +48,7 @@ public class ListingController {
             // to be completed later
         }
 
-        //Applies sorting
+        //Applies sorting order to the search
         if (sortOrder != null) {
             switch (sortOrder.toLowerCase()) {
                 case "price_asc":

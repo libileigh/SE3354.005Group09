@@ -95,6 +95,7 @@ public class ListingController {
         return filters;
     }
 
+    //Sets the filters
     public void setFilters(ArrayList<String> filters) {
         this.filters = filters;
     }

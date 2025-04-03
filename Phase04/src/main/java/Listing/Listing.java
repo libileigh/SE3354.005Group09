@@ -21,12 +21,14 @@ public class Listing {
         this.viewCount = 0;
         this.available = true;
 
+        //sample listings to be used for test cases
         if (!samples) {
             long idTime = System.currentTimeMillis();
             String id1 = "LIST" + (idTime + 1);
             Listing test1 = new Listing(id1, "iPhone 15 Pro", 600.00);
             listingsDatabase.put(id1, test1);
 
+            //listing that was set to unavailable
             String id2 = "LIST" + (idTime + 2);
             Listing test2 = new Listing(id2, "Calculus Textbook", 45.00);
             test2.setAvailable(false);
@@ -48,10 +50,12 @@ public class Listing {
         }
     }
 
+    //Validates if a listing is available
     public boolean isAvailable(Listing listing) {
         return listing != null && listing.available;
     }
 
+    //Gets details about the item when searched for and increments the view count for each call
     public String getItemDetails(Listing listing) {
         if (listing == null) {
             return "Listing not found";
@@ -64,6 +68,7 @@ public class Listing {
                 listing.id, listing.description, listing.price, listing.available ? "Yes" : "No");
     }
 
+    //Creates a new listing with a unique itemID, description, and price, and puts this information into the listing database
     public static Listing createListing(String description, double price) {
         String newId = "LIST" + System.currentTimeMillis();
         Listing newListing = new Listing(newId, description, price);
@@ -71,47 +76,57 @@ public class Listing {
         return newListing;
     }
 
+    //Gets a specified item from the listing database using the itemID
     public static Listing getItem(String itemId) {
         return listingsDatabase.get(itemId);
     }
 
-
+    //Gets the itemID of a listing
     public String getId() {
         return id;
     }
 
+    //Gets the description of a listing
     public String getDescription() {
         return description;
     }
 
+    //Updates the description of a listing
     public void setDescription(String description) {
         this.description = description;
     }
 
+    //Gets the price of a listing
     public double getPrice() {
         return price;
     }
 
+    //Updates the price of a listing
     public void setPrice(double price) {
         this.price = price;
     }
 
+    //Checks if a listing was searched
     public boolean isSearched() {
         return searched;
     }
 
+    //Gets the view count of a listing
     public int getViewCount() {
         return viewCount;
     }
 
+    //Saves the view count of a listing
     public void saveViewCount() {
         System.out.println("View count saved for listing " + id + ": " + viewCount + " views");
     }
 
+    //Set the availability of a listing
     public void setAvailable(boolean available) {
         this.available = available;
     }
 
+    //Returns the entire listing database and all of the listings stored in it
     public static Map<String, Listing> getAllListings() {
         return listingsDatabase;
     }

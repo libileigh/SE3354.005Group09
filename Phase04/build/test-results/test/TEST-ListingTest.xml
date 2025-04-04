@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ListingTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-04-04T21:02:03" hostname="thinkpad-x1" time="0.026">
+<testsuite name="ListingTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-04-04T22:21:47" hostname="thinkpad-x1" time="0.026">
   <properties/>
-  <testcase name="testCreateListingWithNegativePrice()" classname="ListingTest" time="0.011"/>
+  <testcase name="testCreateListingWithNegativePrice()" classname="ListingTest" time="0.012"/>
   <testcase name="testCreateListingWithEmptyDescription()" classname="ListingTest" time="0.001"/>
   <testcase name="testGetItemDetailsWithValidListing()" classname="ListingTest" time="0.002"/>
   <testcase name="testCreateListingWithNullDescription()" classname="ListingTest" time="0.001"/>

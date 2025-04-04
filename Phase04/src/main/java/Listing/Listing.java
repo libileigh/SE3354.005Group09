@@ -21,33 +21,28 @@ public class Listing {
         this.viewCount = 0;	//View count of the listing
         this.available = true;	//Availability of the listing
 
-        //sample listings to be used for test cases
-        if (!samples) {
-            long idTime = System.currentTimeMillis();	//This is the setup to create a lisitng ID
-            String id1 = "LIST" + (idTime + 1); //For a unique listing ID
-            Listing test1 = new Listing(id1, "iPhone 15 Pro", 600.00);
-            listingsDatabase.put(id1, test1);
-
-            //listing that was set to unavailable
-            String id2 = "LIST" + (idTime + 2);	//For a unique listing ID
-            Listing test2 = new Listing(id2, "Calculus Textbook", 45.00);
-            test2.setAvailable(false);
-            listingsDatabase.put(id2, test2);
-
-            String id3 = "LIST" + (idTime + 3);	//For a unique listing ID
-            Listing test3 = new Listing(id3, "Yamaha Electric Guitar", 280.00);
-            listingsDatabase.put(id3, test3);
-
-            String id4 = "LIST" + (idTime + 4);	//For a unique listing ID
-            Listing test4 = new Listing(id4, "Size L UTD Shirt", 14.00);
-            listingsDatabase.put(id4, test4);
-
-            String id5 = "LIST" + (idTime + 5);	//For a unique listing ID
-            Listing test5 = new Listing(id5, "Various stationary lot", 23.00);
-            listingsDatabase.put(id5, test5);
-
-            samples = true; //Check to make sure no extra sample cases are made
-        }
+        //sample listings
+//        if (!samples) {
+//            Listing test1 = new Listing("LIST1", "iPhone 15 Pro", 600.00);
+//            listingsDatabase.put("LIST1", test1);
+//
+//            //listing that was set to unavailable
+//
+//            Listing test2 = new Listing("LIST2", "Calculus Textbook", 45.00);
+//            test2.setAvailable(false);
+//            listingsDatabase.put("LIST2", test2);
+//
+//            Listing test3 = new Listing("LIST3", "Yamaha Electric Guitar", 280.00);
+//            listingsDatabase.put("LIST3", test3);
+//
+//            Listing test4 = new Listing("LIST4", "Size L UTD Shirt", 14.00);
+//            listingsDatabase.put("LIST4", test4);
+//
+//            Listing test5 = new Listing("LIST5", "Various stationary lot", 23.00);
+//            listingsDatabase.put("LIST5", test5);
+//
+//            samples = true; //Check to make sure no extra sample cases are made
+//        }
     }
 
     //Validates if a listing is available

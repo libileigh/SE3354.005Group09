@@ -1,10 +1,10 @@
-package Listing;
-
+import Listing.Listing;
+import Listing.ListingController;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ListingViewEdgeCaseTest {
+ class ListingViewTest {
 
     Listing emptyDescriptionListing;
     Listing negativePriceListing;
@@ -14,9 +14,9 @@ public class ListingViewEdgeCaseTest {
     @BeforeEach
     public void setUp() {
         // setting up edge case listings
-        emptyDescriptionListing = Listing.createListing("", 50.00);
-        negativePriceListing = Listing.createListing("Broken Laptop", -20.00);
-        specialCharsListing = Listing.createListing("UTD Stuff! 🚀📚🔥", 10.00);
+        emptyDescriptionListing = new Listing("LIST1", "", 50.00);
+        negativePriceListing = new Listing("LIST2", "Broken Laptop", -20.00);
+        specialCharsListing = new Listing("LIST3", "UTD Stuff! 🚀📚🔥", 10.00);
 
         // making a long description
         StringBuilder sb = new StringBuilder();
@@ -31,13 +31,14 @@ public class ListingViewEdgeCaseTest {
     public void TC1() {
         String details = emptyDescriptionListing.getItemDetails(emptyDescriptionListing);
         assertTrue(details.contains("Description: "));
+
     }
 
     // tc2: negative price still shows up 
     @Test
     public void TC2() {
         String details = negativePriceListing.getItemDetails(negativePriceListing);
-        assertTrue(details.contains("Price: $-20.00"));
+        assertTrue(details.contains(String.format("Price: $%.2f", -20.00)));
     }
 
     // tc3: handles emojis and random symbols fine

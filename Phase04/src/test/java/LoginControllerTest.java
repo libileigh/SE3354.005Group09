@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoginControllerTest {
+
+    // Test case 1: checking for valid login credentials for user koushik@utdallas.edu
     @Test
     public void TC_01()
     {
@@ -15,6 +17,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 2: checking for valid login credentials for user kushal@utdallas.edu
     @Test
     public void TC_02()
     {
@@ -24,6 +27,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 3: checking for valid login credentials for user manat@utdallas.edu
     @Test
     public void TC_03()
     {
@@ -33,6 +37,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 4: checking for a valid user email with an incorrect password
     @Test
     public void TC_04()
     {
@@ -42,6 +47,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 5: checking for a valid user email with an incorrect password
     @Test
     public void TC_05()
     {
@@ -51,6 +57,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 6: checking for login with an invalid user
     @Test
     public void TC_06()
     {
@@ -60,6 +67,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 7: checking with empty email input
     @Test
     public void TC_07()
     {
@@ -69,6 +77,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 8: checking with empty password input
     @Test
     public void TC_08()
     {
@@ -78,6 +87,7 @@ class LoginControllerTest {
         assertEquals(expected, actual);
     }
 
+    // Test case 9: checking with null email input
     @Test
     public void TC_09()
     {
@@ -86,7 +96,8 @@ class LoginControllerTest {
         String actual = controller.login(null, "Alice@987");
         assertEquals(expected, actual);
     }
-
+    
+    // Test case 10: checking with null email input
     @Test
     public void TC_10()
     {

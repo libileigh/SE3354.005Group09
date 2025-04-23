@@ -1,0 +1,21 @@
+0Computed hash for provided password: 1512569453
+7Stored hash for email koushik@utdallas.edu: 1512569453
+/Login successful for user koushik@utdallas.edu
+0Computed hash for provided password: -683419427
+6Stored hash for email kushal@utdallas.edu: -683419427
+.Login successful for user kushal@utdallas.edu
+/Computed hash for provided password: 188668026
+4Stored hash for email manat@utdallas.edu: 188668026
+-Login successful for user manat@utdallas.edu
+0Computed hash for provided password: -163070136
+7Stored hash for email koushik@utdallas.edu: 1512569453
+CLogin failed Incorrect password for the email koushik@utdallas.edu
+/Computed hash for provided password: 590583685
+6Stored hash for email kushal@utdallas.edu: -683419427
+BLogin failed Incorrect password for the email kushal@utdallas.edu
+CLogin failed: No account found for email: nonexistent@utdallas.edu
+=Login failed: Email is empty or has not been entered please.
+	)Login failed: Password is empty or null.
+
+=Login failed: Email is empty or has not been entered please.
+)Login failed: Password is empty or null.

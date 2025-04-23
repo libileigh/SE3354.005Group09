@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LoginControllerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-04-15T16:10:06" hostname="thinkpad-x1" time="0.125">
+  <properties/>
+  <testcase name="TC_01()" classname="LoginControllerTest" time="0.07"/>
+  <testcase name="TC_02()" classname="LoginControllerTest" time="0.004"/>
+  <testcase name="TC_03()" classname="LoginControllerTest" time="0.004"/>
+  <testcase name="TC_04()" classname="LoginControllerTest" time="0.004"/>
+  <testcase name="TC_05()" classname="LoginControllerTest" time="0.003"/>
+  <testcase name="TC_06()" classname="LoginControllerTest" time="0.003"/>
+  <testcase name="TC_07()" classname="LoginControllerTest" time="0.002"/>
+  <testcase name="TC_08()" classname="LoginControllerTest" time="0.002"/>
+  <testcase name="TC_09()" classname="LoginControllerTest" time="0.003"/>
+  <testcase name="TC_10()" classname="LoginControllerTest" time="0.003"/>
+  <system-out><![CDATA[Computed hash for provided password: 1512569453
+Stored hash for email koushik@utdallas.edu: 1512569453
+Login successful for user koushik@utdallas.edu
+Computed hash for provided password: -683419427
+Stored hash for email kushal@utdallas.edu: -683419427
+Login successful for user kushal@utdallas.edu
+Computed hash for provided password: 188668026
+Stored hash for email manat@utdallas.edu: 188668026
+Login successful for user manat@utdallas.edu
+Computed hash for provided password: -163070136
+Stored hash for email koushik@utdallas.edu: 1512569453
+Login failed Incorrect password for the email koushik@utdallas.edu
+Computed hash for provided password: 590583685
+Stored hash for email kushal@utdallas.edu: -683419427
+Login failed Incorrect password for the email kushal@utdallas.edu
+Login failed: No account found for email: nonexistent@utdallas.edu
+Login failed: Email is empty or has not been entered please.
+Login failed: Password is empty or null.
+Login failed: Email is empty or has not been entered please.
+Login failed: Password is empty or null.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

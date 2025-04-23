@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>UTD Marketplace - Create Listing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                #135946,
+                #135946 20px,
+                #1c6e59 20px,
+                #1c6e59 40px
+            );
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+.view-logout-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f7941e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    }
+
+    .view-logout-button:hover {
+    background-color: #e07e0a;
+    }
+
+    .view-listing-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f7941e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    }
+
+    .view-listing-button:hover {
+    background-color: #e07e0a;
+    }
+
+        .login-title {
+            color: #f7941e;
+            font-size: 32px;
+            margin: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            border-top: 6px solid #2ebfa6;
+            border-bottom: 6px solid #2ebfa6;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #135946;
+        }
+
+        .form-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #135946;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            background: #f7941e;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #e07e0a;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="login-title">Create Listing</div>
+
+    <a href="login.html" class="view-logout-button ">Log-Out</a>
+    <a href="listings.html" class="view-listing-button">View Listings</a>
+
+
+<div class="login-container">
+    <h1>UTD Marketplace</h1>
+    <form id="listingForm">
+        <div class="form-group">
+            <label for="title">Item Title:</label>
+            <input type="text" id="title" placeholder="Enter item title" required />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price ($):</label>
+            <input type="number" id="price" placeholder="Enter price" min="0" step="0.01" required />
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="">Select a category</option>
+                <option value="textbooks">Textbooks</option>
+                <option value="electronics">Electronics</option>
+                <option value="furniture">Furniture</option>
+                <option value="clothing">Clothing</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Enter detailed description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact Email:</label>
+            <input type="text" id="contact" placeholder="your@utdallas.edu" required />
+        </div>
+
+        <button type="submit">Create Listing</button>
+        <div id="error-message" class="error"></div>
+    </form>
+</div>
+
+<script type="module" src="createListing.js"></script>
+</body>
+</html>

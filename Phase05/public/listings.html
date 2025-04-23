@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>UTD Marketplace–Listings</title>
+
+    <style>
+        body {
+       margin: 0;
+       padding: 0;
+       background: repeating-linear-gradient(
+           45deg,
+           #135946,
+           #135946 20px,
+           #1c6e59 20px,
+           #1c6e59 40px
+       );
+
+       font-family: Arial, sans-serif;
+       height: 100vh;
+       box-sizing: border-box;
+   }
+       .login-title {
+         color: #f7941e;
+         font-size: 32px;
+         margin: 20px;
+         position: absolute;
+         top: 0;
+         left: 0;
+       }
+       .back-button {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         background-color: #f7941e;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 10px;
+         text-decoration: none;
+         font-weight: bold;
+         font-size: 14px;
+         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+         transition: background-color 0.3s ease;
+       }
+       .back-button:hover {
+         background-color: #e07e0a;
+       }
+
+       .listings-container {
+         width: 100%;
+         max-width: 900px;
+         margin: 100px auto 40px;
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+         gap: 20px;
+       }
+       .listing-card {
+         background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+         padding: 16px;
+       }
+       .listing-card h2 {
+         margin: 0 0 10px;
+         font-size: 20px;
+         color: #135946;
+       }
+       .listing-card p {
+         margin: 6px 0;
+         font-size: 14px;
+         line-height: 1.4;
+       }
+       .listing-card small {
+         color: #555;
+       }
+       .error {
+         color: red;
+         text-align: center;
+       }
+    </style>
+</head>
+<body>
+<div class="login-title">Listings</div>
+<a href="create_listing.html" class="back-button">Create Listing</a>
+
+<div id="listingsContainer" class="listings-container">
+    <!-- loaded by JS -->
+</div>
+
+<script type="module" src="viewListings.js"></script>
+</body>
+</html>

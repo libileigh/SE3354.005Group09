@@ -96,7 +96,7 @@ describe('Create Account Form', () => {
   test('TC4: Short password shows error', () => {
     nameInput.value = 'Test User';
     emailInput.value = 'test@utdallas.edu';
-    passwordInput.value = '123'; // too short
+    passwordInput.value = '123';
     phoneInput.value = '1234567890';
 
     triggerSubmit();
@@ -106,7 +106,7 @@ describe('Create Account Form', () => {
 
 
   test('TC5: Whitespace name shows error', () => {
-    nameInput.value = '   '; // just whitespace
+    nameInput.value = '   ';
     emailInput.value = 'test@utdallas.edu';
     passwordInput.value = 'Test1234';
     phoneInput.value = '1234567890';

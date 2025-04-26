@@ -5,6 +5,9 @@
       <module name="Phase04" target="22" />
       <module name="Phase04.main" target="22" />
       <module name="Phase04.test" target="22" />
+      <module name="Phase05" target="22" />
+      <module name="Phase05.main" target="22" />
+      <module name="Phase05.test" target="22" />
     </bytecodeTargetLevel>
   </component>
 </project>

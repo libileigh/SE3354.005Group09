@@ -25,7 +25,7 @@ const error = document.getElementById("error");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();//stops the page from refreshing
   error.textContent = ""; //clears any pre-existing errors
-
+success.textContent = "";
 //takes in the values users entered in the form and trims the white spaces.
   const name     = form.name.value.trim();
   const email    = form.email.value.trim();
